@@ -10,6 +10,26 @@
             font-family: Arial, Helvetica, sans-serif;
 
         }
+        h1{
+            width: 490px;
+            padding: 5px;
+            text-align: center;
+            border: 2px solid rgb(255, 0, 0);
+            font-size: 2em;
+            background-color: rgb(255, 134, 134);
+            text-shadow: 1px 1px;
+        }
+        caption{
+            width: 500px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid orange;
+            margin: 5px 0px 5px 0px;
+            font-size: 1.2em;
+            font-weight: bold ; /* Negrito */
+            padding: 5px;
+            background-color: rgb(1, 211, 211);
+        }
         table{
             width: 500px;
             border-collapse: collapse;
@@ -29,26 +49,32 @@
             color: white; /* cor do texto */
 
         }
-        h1{
-            text-align: center;
-        }
+        
     </style>
 </head>
 <body>
     <h1>Uso de Tabelas grandes</h1>
     <!-- ANATOMIA PARA USO DE TABELAS GRANDES
-        THEAD
-            tr(table row), td(table data), th(table head-Título, cabeçalho) 
-        TBODY
-            tr, td, th
-        TFOOT
-            tr, td, th
+        TABLE
+            CAPTION
+                Legenda
+            THEAD
+                tr(table row), td(table data), th(table head-Título, cabeçalho) 
+        
+            TBODY
+                tr, td, th
+            TFOOT
+                tr, td, th
     -->
 <table>
+    <caption>População das Unidades Federativas do Brasil</caption>
     <thead>
         <tr>
-            <th>Estado</th>
-            <th>População</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 100px;">População </th>
+            <!-- scope não interfere na configuração
+            é utilizado pelos sites de busca -->
+            <!-- Exemplo de configuração de estilo dentro da tag-->
         </tr>
     </thead>
 
@@ -165,7 +191,7 @@
 
     <tfoot>
         <tr>
-            <th>Total de Habitantes</th>
+            <th scope="row">Total de Habitantes</th>
             <td class="num"><strong>210.147.125</strong></td>
             <!--strong - Negrito-->
         </tr>
